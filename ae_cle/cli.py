@@ -114,7 +114,9 @@ def main():
         base_tag = '_done'
     else:
         base_tag = ''
-    if args.auxiliary_node:
+    if args.auxiliary_node and args.ae_only:
+        mode_suffix = base_tag + '_auxnode_aeonly'
+    elif args.auxiliary_node:
         mode_suffix = base_tag + '_auxnode'
     elif args.ae_only:
         mode_suffix = base_tag + '_aeonly'
@@ -428,7 +430,7 @@ def main():
                     normalize_scores=aux_params.get('normalize_scores', True),
                     score_norm_method=aux_params.get('score_norm_method', 'min_max'),
                     use_embedding_transform=aux_params.get('use_embedding_transform', True),
-                    use_adaptive_prior=aux_params.get("use_adaptive_prior", True),
+                    use_adaptive_prior=aux_params.get('use_adaptive_prior', args.use_adaptive_prior),
                     joint_training=aux_joint,
                     agg_method=aux_params.get('agg_method', 'mean'),
                     lr_ae=aux_params.get('lr_ae', 5e-3),
@@ -663,8 +665,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
             else:
@@ -683,8 +685,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
         elif args.base_model == 'guide':
@@ -707,8 +709,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
             else:
@@ -730,8 +732,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
         elif args.base_model == 'gadnr':
@@ -752,8 +754,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
             else:
@@ -773,8 +775,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
         elif args.base_model == 'done':
@@ -795,8 +797,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
             else:
@@ -816,8 +818,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
         else:
@@ -836,8 +838,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
             else:
@@ -855,8 +857,8 @@ def main():
                     score_norm_method=params['score_norm_method'],
                     joint_training=args.joint_training,
                     dataset_name=args.dataset,
-                    use_adaptive_prior=args.use_adaptive_prior,
-                    use_embedding_transform=args.use_embedding_transform
+                    use_adaptive_prior=params.get('use_adaptive_prior', args.use_adaptive_prior),
+                    use_embedding_transform=params.get('use_embedding_transform', args.use_embedding_transform)
                 )
                 final_auc = result['auc']
 
