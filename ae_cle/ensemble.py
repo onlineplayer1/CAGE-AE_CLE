@@ -1268,7 +1268,8 @@ def _train_one_aux_worker_done(task):
         score_norm_method=task['score_norm_method'],
         use_embedding_transform=task['use_embedding_transform'],
         joint_training=task['joint_training'],
-        verbose=False
+        verbose=False,
+        use_adaptive_prior=task.get('use_adaptive_prior', False)
     )
 
     combined_orig = combined_all[:n_orig]
@@ -1301,10 +1302,13 @@ def train_auxiliary_node_ensemble_done(data, n_models=10, n_aux_nodes=5,
                                         agg_method='mean',
                                         lr_ae=5e-3,
                                         parallel=True,
-                                   use_adaptive_prior=True):
+                                        use_adaptive_prior=False):
     """Auxiliary node ensemble using DONE base model.
 
     Uses DONE-specific params: done_hidden, done_num_layers, done_dropout.
+
+    CLE uses standard Gaussian noise by default; set use_adaptive_prior=True
+    to use the reference embedding covariance.
 
     Parameters
     ----------
@@ -1456,7 +1460,7 @@ def train_auxiliary_node_ensemble_done(data, n_models=10, n_aux_nodes=5,
                 score_norm_method=score_norm_method,
                 use_embedding_transform=use_embedding_transform,
                 joint_training=joint_training, verbose=verbose,
-                    use_adaptive_prior=use_adaptive_prior
+                use_adaptive_prior=use_adaptive_prior
             )
 
             combined_orig = combined_all[:n_orig]
