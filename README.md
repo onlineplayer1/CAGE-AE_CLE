@@ -78,7 +78,6 @@ Results directory structure:
 ```
 results/
 ├── optuna_results_dominant/
-│   ├── best_params_weibo.json          # Joint AE+CLE
 │   ├── best_params_weibo_aeonly.json   # AE-only
 │   └── best_params_weibo_auxnode.json  # Ensemble
 ├── optuna_results_anomalydae/
