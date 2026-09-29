@@ -141,7 +141,7 @@ def _train_single_joint_done(data, epochs=100, done_hidden=64, done_num_layers=4
                               normalize_loss=True, normalize_method='exponential_moving_average',
                               normalize_scores=True, score_norm_method='min_max',
                               use_embedding_transform=True, joint_training=True, verbose=True,
-                              use_adaptive_prior=True):
+                              use_adaptive_prior=False):
     """Train a single DONE(+CLE) model on given graph.
 
     DONE uses dense adjacency s = to_dense_adj(edge_index) as structural input.
@@ -166,6 +166,8 @@ def _train_single_joint_done(data, epochs=100, done_hidden=64, done_num_layers=4
     use_embedding_transform : bool
     joint_training : bool
     verbose : bool
+    use_adaptive_prior : bool
+        Use embedding covariance for CLE noise; default False uses N(0, I).
 
     Returns
     -------
@@ -220,9 +222,10 @@ def _train_single_joint_done(data, epochs=100, done_hidden=64, done_num_layers=4
                 emb_ref = h_a0
         ae_model.train()
 
-        flow = LinearFlowNoise(dim=emb_ref.shape[1], ridge=1e-3, device=device, dtype=emb_ref.dtype)
-        flow.fit(emb_ref)
-        cle_model.noise_flow = flow.eval()
+        if use_adaptive_prior:
+            flow = LinearFlowNoise(dim=emb_ref.shape[1], ridge=1e-3, device=device, dtype=emb_ref.dtype)
+            flow.fit(emb_ref)
+            cle_model.noise_flow = flow.eval()
 
         if normalize_loss:
             loss_normalizer = LossNormalizer(method=normalize_method)
@@ -320,7 +323,7 @@ def train_joint_done_cle(data, epochs=100, done_hidden=64, done_num_layers=4,
                           lamda1=0.5, lamda2=0.5, normalize_scores=True,
                           score_norm_method='min_max', joint_training=True,
                           dataset_name='unknown', use_embedding_transform=True,
-                          use_adaptive_prior=True):
+                          use_adaptive_prior=False):
     """Joint training of DONE + CLE models.
 
     Parameters
@@ -334,6 +337,8 @@ def train_joint_done_cle(data, epochs=100, done_hidden=64, done_num_layers=4,
     batch_size : int
     device : torch.device | None
     [standard params same as other models]
+    use_adaptive_prior : bool
+        Use embedding covariance for CLE noise; default False uses N(0, I).
 
     Returns
     -------
@@ -409,9 +414,10 @@ def train_joint_done_cle(data, epochs=100, done_hidden=64, done_num_layers=4,
                 emb_ref = h_a0
         ae_model.train()
 
-        flow = LinearFlowNoise(dim=emb_ref.shape[1], ridge=1e-3, device=device, dtype=emb_ref.dtype)
-        flow.fit(emb_ref)
-        cle_model.noise_flow = flow.eval()
+        if use_adaptive_prior:
+            flow = LinearFlowNoise(dim=emb_ref.shape[1], ridge=1e-3, device=device, dtype=emb_ref.dtype)
+            flow.fit(emb_ref)
+            cle_model.noise_flow = flow.eval()
 
     # Training loop
     epoch_times = []
