@@ -1,0 +1,15 @@
+{
+  "dataset": "disney",
+  "best_value": 0.5225988700564972,
+  "best_params": {
+    "ae_hidden": 128,
+    "epochs": 300,
+    "batch_size": 32,
+    "sample_size": 30,
+    "encoder": "SAGE",
+    "normalize_scores": false,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_disney_gadnr_aeonly_20260622_125304"
+}

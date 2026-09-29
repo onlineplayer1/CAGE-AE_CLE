@@ -1,0 +1,15 @@
+{
+  "dataset": "weibo",
+  "best_value": 0.894506909440657,
+  "best_params": {
+    "ae_hidden": 96,
+    "epochs": 250,
+    "batch_size": 96,
+    "sample_size": 25,
+    "encoder": "GIN",
+    "normalize_scores": true,
+    "score_norm_method": "min_max"
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_weibo_gadnr_aeonly_20260628_164944"
+}

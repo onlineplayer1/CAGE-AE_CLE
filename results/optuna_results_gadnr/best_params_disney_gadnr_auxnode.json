@@ -1,0 +1,31 @@
+{
+  "dataset": "disney",
+  "best_value": 0.8135593220338984,
+  "best_params": {
+    "n_aux_models": 15,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.19,
+    "n_connections": 3,
+    "k_std": 4.0,
+    "feature_method": "neighbor_dissimilar",
+    "edge_method": "isolated",
+    "agg_method": "median",
+    "ae_hidden": 256,
+    "sample_size": 5,
+    "encoder": "GIN",
+    "cle_hidden1": 192,
+    "cle_hidden2": 1024,
+    "cle_hidden3": 320,
+    "epochs": 160,
+    "lr_ae": 0.00011945621364573431,
+    "lamda1": 0.93,
+    "lamda2": 1.94,
+    "normalize_method": "exponential_moving_average",
+    "score_norm_method": "min_max",
+    "normalize_loss": true,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_disney_gadnr_auxnode_20260619_113357"
+}

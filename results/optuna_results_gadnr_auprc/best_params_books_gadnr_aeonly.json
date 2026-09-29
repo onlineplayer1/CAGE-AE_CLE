@@ -1,0 +1,15 @@
+{
+  "dataset": "books",
+  "best_value": 0.038295138687231486,
+  "best_params": {
+    "ae_hidden": 64,
+    "epochs": 150,
+    "batch_size": 96,
+    "sample_size": 20,
+    "encoder": "SAGE",
+    "normalize_scores": true,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_books_gadnr_aeonly_20260629_225928"
+}

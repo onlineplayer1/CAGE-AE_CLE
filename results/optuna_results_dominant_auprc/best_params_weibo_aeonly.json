@@ -1,0 +1,15 @@
+{
+  "dataset": "weibo",
+  "best_value": 0.3160191469208184,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 100,
+    "batch_size": 32,
+    "dropout": 0.5,
+    "struct_weight": 0.30000000000000004,
+    "normalize_scores": true,
+    "score_norm_method": "min_max"
+  },
+  "n_trials": 100,
+  "study_name": "dominant_cle_tuning_weibo_aeonly_20260630_135741"
+}

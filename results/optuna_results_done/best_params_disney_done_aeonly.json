@@ -1,0 +1,14 @@
+{
+  "dataset": "disney",
+  "best_value": 0.4661016949152542,
+  "best_params": {
+    "ae_hidden": 80,
+    "epochs": 200,
+    "batch_size": 32,
+    "done_dropout": 0.30000000000000004,
+    "normalize_scores": true,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_disney_done_aeonly_20260612_181119"
+}

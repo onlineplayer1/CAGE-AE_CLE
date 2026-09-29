@@ -1,0 +1,15 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.5828496974412972,
+  "best_params": {
+    "ae_hidden": 48,
+    "epochs": 300,
+    "batch_size": 64,
+    "guide_dropout": 0.2,
+    "guide_alpha": 0.7000000000000001,
+    "normalize_scores": false,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_reddit_guide_aeonly_20260616_194222"
+}

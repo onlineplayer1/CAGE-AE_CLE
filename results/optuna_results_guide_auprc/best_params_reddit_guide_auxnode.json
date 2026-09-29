@@ -1,0 +1,31 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.04394704522229827,
+  "best_params": {
+    "n_aux_models": 9,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.05,
+    "n_connections": 13,
+    "k_std": 0.5,
+    "feature_method": "neighbor_dissimilar",
+    "edge_method": "clique",
+    "agg_method": "max",
+    "ae_hidden": 192,
+    "guide_dropout": 0.5,
+    "guide_alpha": 0.9,
+    "cle_hidden1": 192,
+    "cle_hidden2": 896,
+    "cle_hidden3": 192,
+    "epochs": 200,
+    "lr_ae": 0.0011075613836811172,
+    "lamda1": 0.93,
+    "lamda2": 1.9000000000000001,
+    "normalize_method": "running_average",
+    "score_norm_method": "min_max",
+    "normalize_loss": true,
+    "normalize_scores": false,
+    "use_embedding_transform": true
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_reddit_guide_auxnode_20260624_025912"
+}

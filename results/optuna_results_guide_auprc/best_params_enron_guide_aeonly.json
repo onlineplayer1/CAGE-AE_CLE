@@ -1,0 +1,15 @@
+{
+  "dataset": "enron",
+  "best_value": 0.0008041636862002307,
+  "best_params": {
+    "ae_hidden": 96,
+    "epochs": 250,
+    "batch_size": 96,
+    "guide_dropout": 0.0,
+    "guide_alpha": 0.1,
+    "normalize_scores": false,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_enron_guide_aeonly_20260630_115300"
+}

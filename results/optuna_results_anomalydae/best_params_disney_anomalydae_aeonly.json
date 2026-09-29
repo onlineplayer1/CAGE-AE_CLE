@@ -1,0 +1,14 @@
+{
+  "dataset": "disney",
+  "best_value": 0.5948587570621468,
+  "best_params": {
+    "ae_hidden": 128,
+    "epochs": 250,
+    "batch_size": 32,
+    "ae_dropout": 0.2,
+    "normalize_scores": false,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_disney_anomalydae_aeonly_20260626_151151"
+}

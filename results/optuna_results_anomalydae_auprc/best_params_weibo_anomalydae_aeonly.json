@@ -1,0 +1,14 @@
+{
+  "dataset": "weibo",
+  "best_value": 0.3237326885666847,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 100,
+    "batch_size": 64,
+    "ae_dropout": 0.1,
+    "normalize_scores": false,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_weibo_anomalydae_aeonly_20260630_130937"
+}

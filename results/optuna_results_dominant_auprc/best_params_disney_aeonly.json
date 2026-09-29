@@ -1,0 +1,15 @@
+{
+  "dataset": "disney",
+  "best_value": 0.06582150467447753,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 200,
+    "batch_size": 32,
+    "dropout": 0.0,
+    "struct_weight": 0.5,
+    "normalize_scores": false,
+    "score_norm_method": "min_max"
+  },
+  "n_trials": 100,
+  "study_name": "dominant_cle_tuning_disney_aeonly_20260630_135528"
+}

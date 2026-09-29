@@ -1,0 +1,31 @@
+{
+  "dataset": "books",
+  "best_value": 0.06244712648885361,
+  "best_params": {
+    "n_aux_models": 13,
+    "aux_use_ratio": false,
+    "n_aux_nodes": 2,
+    "n_connections": 9,
+    "k_std": 2.5,
+    "feature_method": "perturb_existing",
+    "edge_method": "random_connect",
+    "agg_method": "median",
+    "ae_hidden": 32,
+    "sample_size": 15,
+    "encoder": "SAGE",
+    "cle_hidden1": 448,
+    "cle_hidden2": 384,
+    "cle_hidden3": 320,
+    "epochs": 180,
+    "lr_ae": 0.00018788214104616233,
+    "lamda1": 1.12,
+    "lamda2": 1.83,
+    "normalize_method": "exponential_moving_average",
+    "score_norm_method": "rank",
+    "normalize_loss": true,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_books_gadnr_auxnode_20260628_202033"
+}

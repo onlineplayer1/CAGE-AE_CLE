@@ -1,0 +1,14 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.584948185728534,
+  "best_params": {
+    "ae_hidden": 64,
+    "epochs": 120,
+    "batch_size": 128,
+    "done_dropout": 0.2,
+    "normalize_scores": false,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_reddit_done_aeonly_20260616_210508"
+}

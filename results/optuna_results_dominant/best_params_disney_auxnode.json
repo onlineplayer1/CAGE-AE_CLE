@@ -1,0 +1,31 @@
+{
+  "dataset": "disney",
+  "best_value": 0.5607344632768361,
+  "best_params": {
+    "n_aux_models": 7,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.15000000000000002,
+    "n_connections": 13,
+    "k_std": 2.5,
+    "feature_method": "outlier_tail",
+    "edge_method": "isolated",
+    "agg_method": "mean",
+    "ae_hidden": 128,
+    "dropout": 0.1,
+    "cle_hidden1": 384,
+    "cle_hidden2": 768,
+    "cle_hidden3": 128,
+    "epochs": 180,
+    "lr_ae": 0.0051293199022037165,
+    "struct_weight": 0.7,
+    "lamda1": 0.5,
+    "lamda2": 1.53,
+    "normalize_method": "running_average",
+    "score_norm_method": "rank",
+    "normalize_loss": true,
+    "normalize_scores": false,
+    "use_embedding_transform": true
+  },
+  "n_trials": 100,
+  "study_name": "dominant_cle_tuning_disney_auxnode_20260604_201015"
+}

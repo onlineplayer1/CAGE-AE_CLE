@@ -1,0 +1,15 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.03885863112082912,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 100,
+    "batch_size": 32,
+    "sample_size": 10,
+    "encoder": "GIN",
+    "normalize_scores": false,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_reddit_gadnr_aeonly_20260629_230237"
+}

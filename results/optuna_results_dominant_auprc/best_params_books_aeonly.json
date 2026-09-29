@@ -1,0 +1,15 @@
+{
+  "dataset": "books",
+  "best_value": 0.044067198203101614,
+  "best_params": {
+    "ae_hidden": 48,
+    "epochs": 150,
+    "batch_size": 96,
+    "dropout": 0.0,
+    "struct_weight": 0.2,
+    "normalize_scores": true,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "dominant_cle_tuning_books_aeonly_20260630_140346"
+}

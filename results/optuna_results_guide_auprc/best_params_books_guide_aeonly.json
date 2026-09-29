@@ -1,0 +1,15 @@
+{
+  "dataset": "books",
+  "best_value": 0.04011048112726807,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 200,
+    "batch_size": 32,
+    "guide_dropout": 0.5,
+    "guide_alpha": 0.2,
+    "normalize_scores": true,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_books_guide_aeonly_20260630_121413"
+}

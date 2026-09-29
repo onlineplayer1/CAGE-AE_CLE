@@ -1,0 +1,30 @@
+{
+  "dataset": "books",
+  "best_value": 0.648098663926002,
+  "best_params": {
+    "n_aux_models": 15,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.08,
+    "n_connections": 8,
+    "k_std": 2.0,
+    "feature_method": "feature_shuffle",
+    "edge_method": "random_connect",
+    "agg_method": "median",
+    "ae_hidden": 256,
+    "ae_dropout": 0.6,
+    "cle_hidden1": 256,
+    "cle_hidden2": 256,
+    "cle_hidden3": 320,
+    "epochs": 150,
+    "lr_ae": 0.0001373661799512707,
+    "lamda1": 1.8,
+    "lamda2": 0.66,
+    "normalize_method": "exponential_moving_average",
+    "score_norm_method": "rank",
+    "normalize_loss": false,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_books_anomalydae_auxnode_20260622_162635"
+}

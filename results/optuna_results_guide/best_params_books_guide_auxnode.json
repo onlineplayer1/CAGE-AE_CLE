@@ -1,0 +1,31 @@
+{
+  "dataset": "books",
+  "best_value": 0.6351789996574169,
+  "best_params": {
+    "n_aux_models": 11,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.25,
+    "n_connections": 10,
+    "k_std": 4.0,
+    "feature_method": "feature_shuffle",
+    "edge_method": "isolated",
+    "agg_method": "median",
+    "ae_hidden": 144,
+    "guide_dropout": 0.5,
+    "guide_alpha": 0.8,
+    "cle_hidden1": 320,
+    "cle_hidden2": 256,
+    "cle_hidden3": 448,
+    "epochs": 110,
+    "lr_ae": 0.00015850929351323806,
+    "lamda1": 1.61,
+    "lamda2": 0.44,
+    "normalize_method": "min_max",
+    "score_norm_method": "z_score",
+    "normalize_loss": true,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_books_guide_auxnode_20260623_204207"
+}

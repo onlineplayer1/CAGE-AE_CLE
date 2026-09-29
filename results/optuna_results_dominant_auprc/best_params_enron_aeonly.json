@@ -1,0 +1,15 @@
+{
+  "dataset": "enron",
+  "best_value": 0.000931441627172039,
+  "best_params": {
+    "ae_hidden": 112,
+    "epochs": 100,
+    "batch_size": 32,
+    "dropout": 0.0,
+    "struct_weight": 0.2,
+    "normalize_scores": true,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "dominant_cle_tuning_enron_aeonly_20260630_134230"
+}

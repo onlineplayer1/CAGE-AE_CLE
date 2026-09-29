@@ -1,0 +1,14 @@
+{
+  "dataset": "enron",
+  "best_value": 0.6749260792430514,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 200,
+    "batch_size": 64,
+    "ae_dropout": 0.1,
+    "normalize_scores": true,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_enron_anomalydae_aeonly_20260626_152638"
+}

@@ -1,0 +1,31 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.03930760155809905,
+  "best_params": {
+    "n_aux_models": 10,
+    "aux_use_ratio": false,
+    "n_aux_nodes": 3,
+    "n_connections": 9,
+    "k_std": 4.0,
+    "feature_method": "neighbor_dissimilar",
+    "edge_method": "low_similarity_connect",
+    "agg_method": "median",
+    "ae_hidden": 16,
+    "sample_size": 25,
+    "encoder": "GCN",
+    "cle_hidden1": 128,
+    "cle_hidden2": 640,
+    "cle_hidden3": 320,
+    "epochs": 110,
+    "lr_ae": 0.00010350937265765619,
+    "lamda1": 1.51,
+    "lamda2": 1.37,
+    "normalize_method": "exponential_moving_average",
+    "score_norm_method": "min_max",
+    "normalize_loss": true,
+    "normalize_scores": false,
+    "use_embedding_transform": true
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_reddit_gadnr_auxnode_20260625_233301"
+}

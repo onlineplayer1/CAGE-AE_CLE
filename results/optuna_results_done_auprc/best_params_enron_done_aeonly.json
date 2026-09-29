@@ -1,0 +1,15 @@
+{
+  "dataset": "enron",
+  "best_value": 0.01575273243398125,
+  "best_params": {
+    "ae_hidden": 112,
+    "epochs": 100,
+    "batch_size": 64,
+    "done_dropout": 0.1,
+    "done_num_layers": 2,
+    "normalize_scores": true,
+    "score_norm_method": "z_score"
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_enron_done_aeonly_20260629_220141"
+}

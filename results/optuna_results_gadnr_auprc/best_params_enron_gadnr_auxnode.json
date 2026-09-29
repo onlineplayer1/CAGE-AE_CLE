@@ -1,0 +1,31 @@
+{
+  "dataset": "enron",
+  "best_value": 0.0015143420589413762,
+  "best_params": {
+    "n_aux_models": 16,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.060000000000000005,
+    "n_connections": 19,
+    "k_std": 5.0,
+    "feature_method": "smote_outlier",
+    "edge_method": "random_connect",
+    "agg_method": "max",
+    "ae_hidden": 208,
+    "sample_size": 30,
+    "encoder": "SAGE",
+    "cle_hidden1": 448,
+    "cle_hidden2": 256,
+    "cle_hidden3": 448,
+    "epochs": 190,
+    "lr_ae": 0.0001591723047553061,
+    "lamda1": 1.1400000000000001,
+    "lamda2": 1.55,
+    "normalize_method": "min_max",
+    "score_norm_method": "rank",
+    "normalize_loss": true,
+    "normalize_scores": false,
+    "use_embedding_transform": true
+  },
+  "n_trials": 100,
+  "study_name": "gadnr_cle_tuning_enron_gadnr_auxnode_20260624_102506"
+}

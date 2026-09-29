@@ -1,0 +1,15 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.5642912797836851,
+  "best_params": {
+    "ae_hidden": 64,
+    "epochs": 150,
+    "batch_size": 64,
+    "dropout": 0.1,
+    "struct_weight": 0.7000000000000001,
+    "normalize_scores": true,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "dominant_cle_tuning_reddit_aeonly_20260626_145456"
+}

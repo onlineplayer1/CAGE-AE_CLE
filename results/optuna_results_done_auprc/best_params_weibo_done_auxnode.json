@@ -1,0 +1,30 @@
+{
+  "dataset": "weibo",
+  "best_value": 0.3251194555828343,
+  "best_params": {
+    "n_aux_models": 18,
+    "aux_use_ratio": false,
+    "n_aux_nodes": 29,
+    "n_connections": 2,
+    "k_std": 5.0,
+    "feature_method": "feature_shuffle",
+    "edge_method": "isolated",
+    "agg_method": "mean",
+    "ae_hidden": 16,
+    "done_dropout": 0.0,
+    "cle_hidden1": 512,
+    "cle_hidden2": 768,
+    "cle_hidden3": 512,
+    "epochs": 170,
+    "lr_ae": 0.0006947647423366714,
+    "lamda1": 1.2,
+    "lamda2": 0.61,
+    "normalize_method": "running_average",
+    "score_norm_method": "z_score",
+    "normalize_loss": false,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_weibo_done_auxnode_20260625_103527"
+}

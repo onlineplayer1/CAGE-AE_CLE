@@ -1,0 +1,30 @@
+{
+  "dataset": "disney",
+  "best_value": 0.6299435028248588,
+  "best_params": {
+    "n_aux_models": 9,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.09999999999999999,
+    "n_connections": 18,
+    "k_std": 3.0,
+    "feature_method": "perturb_existing",
+    "edge_method": "random_connect",
+    "agg_method": "mean",
+    "ae_hidden": 64,
+    "done_dropout": 0.5,
+    "cle_hidden1": 192,
+    "cle_hidden2": 512,
+    "cle_hidden3": 192,
+    "epochs": 80,
+    "lr_ae": 0.0020554250442513205,
+    "lamda1": 1.77,
+    "lamda2": 0.35000000000000003,
+    "normalize_method": "min_max",
+    "score_norm_method": "z_score",
+    "normalize_loss": true,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_disney_done_auxnode_20260617_154110"
+}

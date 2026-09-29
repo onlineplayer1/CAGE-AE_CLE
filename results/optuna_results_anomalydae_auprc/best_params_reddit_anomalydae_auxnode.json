@@ -1,0 +1,30 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.04155914708591023,
+  "best_params": {
+    "n_aux_models": 19,
+    "aux_use_ratio": false,
+    "n_aux_nodes": 2,
+    "n_connections": 0,
+    "k_std": 2.0,
+    "feature_method": "smote_outlier",
+    "edge_method": "low_similarity_connect",
+    "agg_method": "mean",
+    "ae_hidden": 192,
+    "ae_dropout": 0.6,
+    "cle_hidden1": 448,
+    "cle_hidden2": 384,
+    "cle_hidden3": 192,
+    "epochs": 190,
+    "lr_ae": 0.005928071022874996,
+    "lamda1": 0.72,
+    "lamda2": 0.5,
+    "normalize_method": "running_average",
+    "score_norm_method": "rank",
+    "normalize_loss": false,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_reddit_anomalydae_auxnode_20260621_141315"
+}

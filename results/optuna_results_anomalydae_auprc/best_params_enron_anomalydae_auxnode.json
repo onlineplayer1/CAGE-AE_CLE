@@ -1,0 +1,30 @@
+{
+  "dataset": "enron",
+  "best_value": 0.0014414659167030777,
+  "best_params": {
+    "n_aux_models": 19,
+    "aux_use_ratio": false,
+    "n_aux_nodes": 28,
+    "n_connections": 9,
+    "k_std": 1.5,
+    "feature_method": "perturb_existing",
+    "edge_method": "isolated",
+    "agg_method": "median",
+    "ae_hidden": 16,
+    "ae_dropout": 0.7,
+    "cle_hidden1": 256,
+    "cle_hidden2": 768,
+    "cle_hidden3": 512,
+    "epochs": 200,
+    "lr_ae": 0.0009200102360207912,
+    "lamda1": 1.01,
+    "lamda2": 0.54,
+    "normalize_method": "running_average",
+    "score_norm_method": "z_score",
+    "normalize_loss": false,
+    "normalize_scores": false,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_enron_anomalydae_auxnode_20260621_184720"
+}

@@ -1,0 +1,31 @@
+{
+  "dataset": "enron",
+  "best_value": 0.001047171615562179,
+  "best_params": {
+    "n_aux_models": 10,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.23,
+    "n_connections": 11,
+    "k_std": 4.0,
+    "feature_method": "smote_outlier",
+    "edge_method": "isolated",
+    "agg_method": "mean",
+    "ae_hidden": 96,
+    "guide_dropout": 0.0,
+    "guide_alpha": 0.1,
+    "cle_hidden1": 320,
+    "cle_hidden2": 640,
+    "cle_hidden3": 384,
+    "epochs": 180,
+    "lr_ae": 0.0002915344905246639,
+    "lamda1": 1.3900000000000001,
+    "lamda2": 0.79,
+    "normalize_method": "exponential_moving_average",
+    "score_norm_method": "min_max",
+    "normalize_loss": true,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_enron_guide_auxnode_20260629_001356"
+}

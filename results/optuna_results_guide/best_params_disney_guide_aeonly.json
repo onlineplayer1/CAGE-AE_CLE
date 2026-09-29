@@ -1,0 +1,15 @@
+{
+  "dataset": "disney",
+  "best_value": 0.524482109227872,
+  "best_params": {
+    "ae_hidden": 32,
+    "epochs": 250,
+    "batch_size": 32,
+    "guide_dropout": 0.5,
+    "guide_alpha": 0.7000000000000001,
+    "normalize_scores": true,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "guide_cle_tuning_disney_guide_aeonly_20260626_125733"
+}

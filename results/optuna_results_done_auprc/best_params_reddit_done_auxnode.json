@@ -1,0 +1,30 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.05137746023437993,
+  "best_params": {
+    "n_aux_models": 18,
+    "aux_use_ratio": true,
+    "aux_node_ratio": 0.09999999999999999,
+    "n_connections": 4,
+    "k_std": 3.0,
+    "feature_method": "smote_outlier",
+    "edge_method": "random_connect",
+    "agg_method": "median",
+    "ae_hidden": 80,
+    "done_dropout": 0.1,
+    "cle_hidden1": 448,
+    "cle_hidden2": 256,
+    "cle_hidden3": 256,
+    "epochs": 200,
+    "lr_ae": 0.0005656494592895171,
+    "lamda1": 0.8300000000000001,
+    "lamda2": 0.8300000000000001,
+    "normalize_method": "z_score",
+    "score_norm_method": "rank",
+    "normalize_loss": true,
+    "normalize_scores": true,
+    "use_embedding_transform": false
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_reddit_done_auxnode_20260625_023859"
+}

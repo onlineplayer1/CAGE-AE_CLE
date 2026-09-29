@@ -1,0 +1,30 @@
+{
+  "dataset": "disney",
+  "best_value": 0.7076271186440678,
+  "best_params": {
+    "n_aux_models": 8,
+    "aux_use_ratio": false,
+    "n_aux_nodes": 27,
+    "n_connections": 17,
+    "k_std": 3.5,
+    "feature_method": "feature_shuffle",
+    "edge_method": "clique",
+    "agg_method": "max",
+    "ae_hidden": 48,
+    "ae_dropout": 0.2,
+    "cle_hidden1": 448,
+    "cle_hidden2": 256,
+    "cle_hidden3": 128,
+    "epochs": 80,
+    "lr_ae": 0.0001236697233515637,
+    "lamda1": 1.76,
+    "lamda2": 1.11,
+    "normalize_method": "min_max",
+    "score_norm_method": "z_score",
+    "normalize_loss": false,
+    "normalize_scores": false,
+    "use_embedding_transform": true
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_disney_anomalydae_auxnode_20260615_193925"
+}

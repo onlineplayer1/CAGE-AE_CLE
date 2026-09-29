@@ -1,0 +1,14 @@
+{
+  "dataset": "books",
+  "best_value": 0.030372681724033228,
+  "best_params": {
+    "ae_hidden": 96,
+    "epochs": 100,
+    "batch_size": 128,
+    "ae_dropout": 0.4,
+    "normalize_scores": true,
+    "score_norm_method": "rank"
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_books_anomalydae_aeonly_20260630_131911"
+}

@@ -1,0 +1,14 @@
+{
+  "dataset": "reddit",
+  "best_value": 0.5231405428661712,
+  "best_params": {
+    "ae_hidden": 48,
+    "epochs": 100,
+    "batch_size": 64,
+    "ae_dropout": 0.2,
+    "normalize_scores": true,
+    "score_norm_method": "min_max"
+  },
+  "n_trials": 100,
+  "study_name": "anomalydae_cle_tuning_reddit_anomalydae_aeonly_20260626_151823"
+}

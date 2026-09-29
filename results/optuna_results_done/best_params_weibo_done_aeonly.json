@@ -1,0 +1,14 @@
+{
+  "dataset": "weibo",
+  "best_value": 0.8731403735024816,
+  "best_params": {
+    "ae_hidden": 48,
+    "epochs": 300,
+    "batch_size": 96,
+    "done_dropout": 0.5,
+    "normalize_scores": true,
+    "score_norm_method": "min_max"
+  },
+  "n_trials": 100,
+  "study_name": "done_cle_tuning_weibo_done_aeonly_20260612_181335"
+}
