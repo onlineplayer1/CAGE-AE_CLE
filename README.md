@@ -67,7 +67,7 @@ python run.py --dataset weibo --base_model dominant --seed 42 --n_runs 10
 ## Reproducibility
 
 - **Runs and timing.** Each run uses `seed + run_index`, starting at index 0. With `--seed 42 --n_runs 10`, the summary uses all ten runs for the mean, population standard deviation (`ddof=0`) and best value of each metric. Average runtime includes the first run. GPU results can vary across executions.
-- **Latent corruption.** The paper's default CAGE configuration uses standard Gaussian noise and disables both the adaptive prior and the embedding transform. Among the 25 released AUC-selected CAGE configurations, 9 enable the embedding transform and the DONE–Weibo configuration enables the adaptive prior. Loading a JSON file applies its saved settings, including any `use_embedding_transform` value, after the CLI defaults. Check the printed `use_embedding_transform` and `use_adaptive_prior` fields when comparing configurations.
+- **Latent corruption.** The paper's default CAGE configuration uses standard Gaussian noise and disables both the adaptive prior and the embedding transform. Loading a JSON file applies its saved settings, including any `use_embedding_transform` value, after the CLI defaults. Check the printed `use_embedding_transform` and `use_adaptive_prior` fields when comparing configurations.
 
 ## Project Structure
 
