@@ -877,35 +877,15 @@ def main():
     pk_scores = np.array(pk_scores)
     rk_scores = np.array(rk_scores)
 
-    if len(auc_scores) >= 3:
-        sorted_auc = np.sort(auc_scores)
-        keep_idx = np.argsort(auc_scores)[2:]
-        mean_auc = np.mean(auc_scores[keep_idx])
-        std_auc = np.std(auc_scores[keep_idx])
-        mean_auprc = np.mean(auprc_scores[keep_idx])
-        std_auprc = np.std(auprc_scores[keep_idx])
-        mean_pk = np.mean(pk_scores[keep_idx])
-        std_pk = np.std(pk_scores[keep_idx])
-        mean_rk = np.mean(rk_scores[keep_idx])
-        std_rk = np.std(rk_scores[keep_idx])
-    else:
-        mean_auc = np.mean(auc_scores)
-        std_auc = np.std(auc_scores)
-        mean_auprc = np.mean(auprc_scores)
-        std_auprc = np.std(auprc_scores)
-        mean_pk = np.mean(pk_scores)
-        std_pk = np.std(pk_scores)
-        mean_rk = np.mean(rk_scores)
-        std_rk = np.std(rk_scores)
-
-    if len(run_times) > 1:
-        filtered_run_times = run_times[1:]
-        avg_run_time = np.mean(filtered_run_times)
-        run_time_note = f" (excluding first run, based on {len(filtered_run_times)} runs)"
-    else:
-        filtered_run_times = run_times
-        avg_run_time = np.mean(filtered_run_times)
-        run_time_note = ""
+    mean_auc = np.mean(auc_scores)
+    std_auc = np.std(auc_scores)
+    mean_auprc = np.mean(auprc_scores)
+    std_auprc = np.std(auprc_scores)
+    mean_pk = np.mean(pk_scores)
+    std_pk = np.std(pk_scores)
+    mean_rk = np.mean(rk_scores)
+    std_rk = np.std(rk_scores)
+    avg_run_time = np.mean(run_times)
 
     total_experiment_time = time.time() - experiment_start_time
 
@@ -919,16 +899,14 @@ def main():
     print(f"Number of runs: {args.n_runs}")
     print(f"Individual AUC scores: {[f'{score:.6f}' for score in auc_scores]}")
     print(f"Individual run times: {[f'{format_timedelta_precise(timedelta(seconds=t))}' for t in run_times]}")
-    if len(run_times) > 1:
-        print(f"Filtered run times (excluding first): {[f'{format_timedelta_precise(timedelta(seconds=t))}' for t in filtered_run_times]}")
-    best_auc = float(np.max(auc_scores[keep_idx])) if len(auc_scores) >= 3 else float(np.max(auc_scores))
-    best_auprc = float(np.max(auprc_scores[keep_idx])) if len(auc_scores) >= 3 else float(np.max(auprc_scores))
-    best_pk = float(np.max(pk_scores[keep_idx])) if len(auc_scores) >= 3 else float(np.max(pk_scores))
-    best_rk = float(np.max(rk_scores[keep_idx])) if len(auc_scores) >= 3 else float(np.max(rk_scores))
+    best_auc = float(np.max(auc_scores))
+    best_auprc = float(np.max(auprc_scores))
+    best_pk = float(np.max(pk_scores))
+    best_rk = float(np.max(rk_scores))
     print(f"AUC:   {mean_auc:.6f} ± {std_auc:.6f}  (best: {best_auc:.6f})")
     print(f"AUPRC: {mean_auprc:.6f} ± {std_auprc:.6f}  (best: {best_auprc:.6f})")
     print(f"P@{k_val}:  {mean_pk:.6f} ± {std_pk:.6f}  (best: {best_pk:.6f})")
     print(f"R@{k_val}:  {mean_rk:.6f} ± {std_rk:.6f}  (best: {best_rk:.6f})")
-    print(f"Average run time: {format_timedelta_precise(timedelta(seconds=avg_run_time))}{run_time_note}")
+    print(f"Average run time: {format_timedelta_precise(timedelta(seconds=avg_run_time))}")
     print(f"Total experiment time: {format_timedelta_precise(timedelta(seconds=total_experiment_time))}")
     print("=" * 60)
